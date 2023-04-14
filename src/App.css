@@ -23,6 +23,7 @@
 }
 .systemDesign > a {
     text-decoration: none;
+    color:var(--text-heading-dark);
 }
 .divStyle {
   display: flex;
