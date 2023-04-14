@@ -15,7 +15,7 @@ const Ul = styled.ul`
   font-family: "Circular Std";
 
   li {
-    padding: 10px 0 10px 30px;
+    padding: 10px 30px 10px 30px;
     font-weight: 700;
     cursor: pointer;
   }

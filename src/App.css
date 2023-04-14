@@ -592,3 +592,6 @@ footer > p {
 
 
 
+.lock-scroll {
+  overflow-y: hidden;
+}
