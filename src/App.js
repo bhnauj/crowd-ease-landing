@@ -52,7 +52,7 @@ function App() {
               </p>
               <p className="mainText heroHeading3" >
               Scroll for more <br/>
-              <Link to="overview" spy={true} smooth={true} offset={-500} duration={3000}>
+              <Link to="overview" spy={true} smooth={true} offset={-50} duration={3000}>
               {theme === "light" ? (
                   <img src={dropDown} alt="dropDown"/>
                 ) : (

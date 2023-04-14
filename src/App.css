@@ -8,6 +8,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+.logoMain{
+  width: 60%;
+}
 .WhyCrowdEaseDetail {
   text-align: left;
 }
@@ -57,7 +60,7 @@ ul {
 }
 .proposal {
   background: var(--text-heading);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); */
   border-radius: 40px;
   width: 174px;
   height: 40px;
@@ -485,7 +488,7 @@ footer > p {
   }
   .sectionTeam {
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     grid-gap: 2rem;
   }
@@ -539,8 +542,7 @@ footer > p {
 
 @media screen and (min-width: 1400px) {
   .sectionTeam {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    max-width: 1400px;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0 auto;
     grid-gap: 2rem;
   }

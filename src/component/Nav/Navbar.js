@@ -2,6 +2,7 @@ import { React , useContext } from 'react';
 import styled from 'styled-components';
 import Burger from './Burger';
 import logo from '../../logo.png';
+import logoLight from '../../logoLight.png';
 import ThemeContext from '../../context/themeContext';
 
 const Nav = styled.nav`
@@ -21,7 +22,12 @@ const Navbar = () => {
   return (
     <Nav>
       <div className="logo">
-        <img src={logo}  alt="logo" />
+      {theme === "light" ? (
+                <img className='logoMain' src={logoLight} alt="night" />
+              ) : (
+                <img className='logoMain' src={logo}  alt="logo" />
+              )}
+        
       </div>
       <Burger />
     </Nav>
