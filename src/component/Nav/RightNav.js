@@ -58,7 +58,7 @@ const RightNav = ({ open }) => {
           <li><Link to="team" spy={true} smooth={true} offset={-150} duration={3000}>Team</Link></li>
           <li><Link to="contact" spy={true} smooth={true} offset={-150} duration={3000}>Contact</Link></li>
           <li>
-            <button className="systemDesign"><a href="http://localhost:3000/pdf-name.pdf" target='_blank' rel="noreferrer">Design System</a></button>
+            <button className="systemDesign"><a href="/pdf-name.pdf" target='_blank' rel="noreferrer">Design System</a></button>
           </li>
           <li>
             <button className="proposal"><a href={proposal} className="proposal" download>Download Proposal</a></button>
