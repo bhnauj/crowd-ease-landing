@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --background: white;
+  --text-primary: black;
+  --text-secondary: #F4F4F4;
+  --accent: purple;
+  --text-heading-dark:#338433;
+  --text-heading:#8335FD;
+  --background-shade:linear-gradient(171deg, #B687FF -26.17%, #68B5DE 44.77%, #fff 82.27%);
+  
+}
+
+[data-theme='dark'] {
+  --background: black;
+  --background2:#272628;
+  --text-primary: white;
+  --text-secondary: black;
+  --accent: darkred;
+  --text-heading:#B687FF;
+  --text-heading-dark:#90EE90;
+  --background-shade:linear-gradient(171.5deg, #5F4077 -11.26%, #132132 55.1%, #262627 90.75%);
+}
+
+@font-face {
+  font-family: "Circular Std";
+  src: local("Circular Std"),
+   url("./fonts/CircularStd-Black.otf") format("truetype");
+  font-weight: bold;
+  }
