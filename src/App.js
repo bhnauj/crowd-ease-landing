@@ -104,7 +104,7 @@ function App() {
               <p className="mainFooterDesc">
                 Got a question? We would love to hear from you.
               </p>
-              <form action="/action_page.php">
+              <form >
                 <input type="text" id="name" name="name" placeholder="Name" />{" "}
                 <br />
                 <input
