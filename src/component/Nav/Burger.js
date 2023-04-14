@@ -1,7 +1,8 @@
-import React ,{useState, useContext} from 'react';
+import React ,{useState, useContext, useEffect} from 'react';
 import ThemeContext from '../../context/themeContext';
 import styled from 'styled-components'
 import RightNav from './RightNav';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 const StyledBurger = styled.div`
   width: 2rem;
@@ -34,15 +35,14 @@ const StyledBurger = styled.div`
       transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
-
-  body {
-    overflow-y:  ${({ open }) => open ? 'hidden' : 'auto'};
-  }
 `;
 
 const Burger = () => {
     const [open, setOpen] = useState(false);
     const { theme } = useContext(ThemeContext);
+    useEffect(() => {
+      open ? disableBodyScroll() : enableBodyScroll();
+    }, [open])
   return (
     <>
     <StyledBurger theme={theme} open={open} onClick={() => setOpen(!open)}>
