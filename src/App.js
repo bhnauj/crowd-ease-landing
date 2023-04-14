@@ -13,7 +13,7 @@ import hotel from "./assets/LandingDay.png";
 import hotelNight from "./assets/LandingNight.png";
 import useLocalStorage from "use-local-storage";
 import Team from "./component/team";
-
+import { Link } from 'react-scroll';
 import React from "react";
 import SliderModel from "./component/slider.js";
 import Navbar from "./component/Nav/Navbar.js";
@@ -37,7 +37,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setThemeMode: setTheme}}>
       <div className="App" data-theme={theme}>
-        <header>
+        <header id="home">
           <Navbar />
         </header>
         <body>
@@ -52,12 +52,13 @@ function App() {
               </p>
               <p className="mainText heroHeading3" >
               Scroll for more <br/>
+              <Link to="overview" spy={true} smooth={true} offset={-500} duration={3000}>
               {theme === "light" ? (
                   <img src={dropDown} alt="dropDown"/>
                 ) : (
                   <img src={dropDownDark} alt="dropDown" />
                 )}
-              
+              </Link>
               </p>
 
             {theme === "light" ? (
@@ -69,8 +70,8 @@ function App() {
               
             </div>
           </section>
-          <section className="crowdEaseMain">
-            <div>
+          <section id="overview" className="crowdEaseMain">
+            <div  >
             <img className="videoIllstration" src={videoIllustration} alt="videoIllstration" />
             </div>
             <div>
@@ -86,7 +87,7 @@ function App() {
               </p>
             </div>
           </section>
-          <section>
+          <section id="feature">
             <div className="slide-container">
               <p className="teamHeading">
                 <b>Main Features</b>
@@ -95,9 +96,9 @@ function App() {
               <SliderModel theme={theme} />
             </div>
           </section>
-          <Team theme={theme} />
+          <Team id="team" theme={theme} />
 
-          <section className="mainFooter">
+          <section id="contact" className="mainFooter">
             <div className="footerFormArea">
               <p className="mainFooterHeading">Lets Get Connected</p>
               <p className="mainFooterDesc">

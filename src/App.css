@@ -21,6 +21,9 @@
   width: 174px;
   height: 40px;
 }
+.systemDesign > a {
+    text-decoration: none;
+}
 .divStyle {
   display: flex;
   align-items: center;
@@ -61,7 +64,9 @@ ul {
   color: var(--text-secondary);
   font-family: "Circular Std";
 }
-
+.proposal > a {
+  text-decoration: none;
+}
 /* Main */
 .mainText {
   clip: rect(0 0 0 0);
@@ -313,6 +318,52 @@ footer > p {
   width: 80%;
 }
 
+.slideshow {
+  max-width: 1240px;
+  margin: 0 auto;
+
+  overflow: hidden;
+}
+
+.slide-phone {
+  background: var(--text-secondary);
+  display: flex;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  transition: 0.3s all ease;
+  padding: 1rem;
+  border-radius: 50px;
+  margin: 0.5rem;
+ 
+}
+
+.slideshow .slick-active .slide-phone {
+  border-color: var(--text-heading-dark);
+}
+
+.sliderLeft{
+  display: flex;
+  flex-flow: column;
+    text-align: left;
+    height:450px;
+    
+}
+.slick-next , .slick-perv{
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+.slide-phone .sliderRight img {
+  width: 100%;
+  object-fit: contain;
+}
+
 @media screen and (min-width: 1200px) {
   ul {
     align-items: center;
@@ -345,6 +396,7 @@ footer > p {
     font-size: 15px;
     line-height: 38px;
     margin: 0;
+    cursor: pointer;
   }
   .heroHeading3 > img {
     width:40px;
@@ -492,12 +544,17 @@ footer > p {
     grid-gap: 2rem;
   }
   .slideshow {
-    max-width: 1440px !important;
+    max-width: 1440px;
   }
   .slide-phone{
     justify-content: space-evenly;
   }
   
+}
+@media screen and (min-width: 1500px) {
+.slideshow {
+  max-width: 1522px;
+}
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -530,50 +587,7 @@ footer > p {
   }
 }
 
-.slideshow {
-  max-width: 1240px;
-  margin: 0 auto;
-
-  overflow: hidden;
-}
 
 
 
-.slide-phone {
-  background: var(--text-secondary);
-  display: flex;
-  box-sizing: border-box;
-  border: 3px solid transparent;
-  transition: 0.3s all ease;
-  padding: 1rem;
-  border-radius: 50px;
-  margin: 0.5rem;
- 
-}
 
-.slideshow .slick-active .slide-phone {
-  border-color: var(--text-heading-dark);
-}
-
-.sliderLeft{
-  display: flex;
-  flex-flow: column;
-    text-align: left;
-    height:450px;
-    
-}
-.slick-next , .slick-perv{
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
-
-.slide-phone .sliderRight img {
-  width: 100%;
-  object-fit: contain;
-}

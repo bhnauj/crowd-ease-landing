@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from 'react-scroll';
 import useLocalStorage from "use-local-storage";
 import night from "../../assets/night.png";
 import morning from "../../assets/Morning.png";
 import { useContext } from "react";
 import ThemeContext from "../../context/themeContext";
+import proposal from '../../assets/CrowdEaseProposal.pdf'
 
 const Ul = styled.ul`
   list-style: none;
@@ -15,6 +17,7 @@ const Ul = styled.ul`
   li {
     padding: 10px 0 10px 30px;
     font-weight: 700;
+    cursor: pointer;
   }
   @media (max-width: 768px) {
     flex-flow: column nowrap;
@@ -50,16 +53,15 @@ const RightNav = ({ open }) => {
     <ThemeContext.Consumer>
       {() => (
         <Ul open={open} theme={theme}>
-          <li>Overview</li>
-          <li>Feature</li>
-          <li>Team</li>
-          <li>Contact</li>
+          <li><Link to="home" spy={true} smooth={true} offset={50} duration={500}>Overview</Link></li>
+          <li><Link to="feature" spy={true} smooth={true} offset={-30} duration={500}>Feature</Link></li>
+          <li><Link to="team" spy={true} smooth={true} offset={-150} duration={3000}>Team</Link></li>
+          <li><Link to="contact" spy={true} smooth={true} offset={-150} duration={3000}>Contact</Link></li>
           <li>
-            <button className="systemDesign">Design System</button>
+            <button className="systemDesign"><a href="http://localhost:3000/pdf-name.pdf" target='_blank' rel="noreferrer">Design System</a></button>
           </li>
           <li>
-            {" "}
-            <button className="proposal">Downlaod Proposal</button>
+            <button className="proposal"><a href={proposal} className="proposal" download>Download Proposal</a></button>
           </li>
           <li>
             <button className="theme" onClick={switchTheme}>

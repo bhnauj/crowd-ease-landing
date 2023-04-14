@@ -22,7 +22,10 @@ const teamImages = [
         name: 'Florida Joca',
         profile: 'Full Stack Developer',
         sil:lightGit,
-        sid:darkGit
+        sid:darkGit,
+        linkedinUrl:'https://www.linkedin.com/in/florida-joca',
+        website:'https://github.com/floridajoca'
+
 
     },
     {
@@ -30,56 +33,72 @@ const teamImages = [
         name: 'Diego Santa Cruz',
         profile: 'Full Stack Developer',
         sil:lightGit,
-        sid:darkGit
+        sid:darkGit,
+        linkedinUrl:'https://www.linkedin.com/in/diegosantacruzm',
+        website:'https://github.com/juggler-dev'
     },
     {
         url: Rojin,
         name: 'Rojin Taghadosi',
         profile: 'Full Stack Developer',
         sil:lightGit,
-        sid:darkGit
+        sid:darkGit,
+        linkedinUrl:'https://www.linkedin.com/in/rojin-taghadosi',
+        website:'https://github.com/rojintag'
     },
     {
         url: Winall,
         name: 'Winall Lopes',
         profile: 'Full Stack Developer',
         sil:lightGit,
-        sid:darkGit
+        sid:darkGit,
+        linkedinUrl:'https://www.linkedin.com/in/win-all-lopes',
+        website:'https://github.com/LOPESWI3'
     },
     {
         url: Bhanuj,
         name: 'Bhanuj Nagpal',
         profile: 'Full Stack Developer',
         sil:lightGit,
-        sid:darkGit
+        sid:darkGit,
+        linkedinUrl:'https://www.linkedin.com/in/bhanujnagpal',
+        website:'https://github.com/bhnauj'
     },
     {
         url: Jasmin,
         name: 'Yas Fazeli',
         profile: 'UX/UI Designer',
         sil:lightV,
-        sid:darkV
+        sid:darkV,
+        linkedinUrl:'https://www.linkedin.com/in/yasfazeli',
+        website:'https://google.com'
     },
     {
         url: Andrew,
         name: 'Andrew Yip',
         profile: 'UX/UI Designer',
         sil:lightV,
-        sid:darkV
+        sid:darkV,
+        linkedinUrl:'https://www.linkedin.com/in/andrewthyip',
+        website:'https://andrewthyip.com'
     },
     {
         url: Manpreet,
         name: 'Manpreet Kaur',
         profile: 'UX/UI Designer',
         sil:lightV,
-        sid:darkV
+        sid:darkV,
+        linkedinUrl:'https://www.linkedin.com/in/manpreet-kaur07',
+        website:'https://google.com'
     },
     {
         url: Anmol,
         name: 'Anmoldeep Kaur',
         profile: 'UX/UI Designer',
         sil:lightV,
-        sid:darkV
+        sid:darkV,
+        linkedinUrl:'https://www.linkedin.com/in/anmoldeep-kaur01',
+        website:'https://google.com'
     }
   ];
 
@@ -91,15 +110,15 @@ const Team = ({theme}) => {
           <div className='sectionTeam'>
             
             {teamImages.map((teamImages, index)=> (
-            <div className='team'>
+            <div className='team' key={index}>
             <img className='image' src={teamImages.url} alt="avatar"/>
             <div className='profileDetails'>
               <p className='name'>{teamImages.name}</p>
               <p className='profile'>{teamImages.profile}</p>
               <div className='socialIcon'>
-              <a href="https://www.linkedin.com/" target={"_blank"}><img className="linkedin" src={linkedin} alt="linkedin" /></a>
+              <a href={teamImages.linkedinUrl} target={"_blank"}><img className="linkedin" src={linkedin} alt="linkedin" /></a>
 
-              {theme === 'light' ? <img src={teamImages.sid} alt="gitHub" /> : <img src={teamImages.sil} alt="gitHub" />}
+              {theme === 'light' ? <a href={teamImages.website} target={"_blank"}> <img src={teamImages.sid} alt="gitHub" /></a> : <a href={teamImages.website} target={"_blank"}><img src={teamImages.sil} alt="gitHub" /></a>}
               
               </div>
               </div>

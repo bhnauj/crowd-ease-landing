@@ -41,8 +41,8 @@ const SliderModel = ({ theme }) => {
     <div className="slideshow">
      <Slider dots infinite speed={500} slidesToShow={1} centerMode centerPadding={'250px'} autoplay autoplaySpeed={3000} responsive={[{breakpoint: '600px', settings: {centerPadding: '50px'}}, {breakpoint: '1200px', settings: {centerPadding: '50px'}},{breakpoint: '1400px', settings: {centerPadding: '50px'}}]}>
         {slideImages.map((slideImage, index) => (
-          <div>
-            <div className="slide-phone" key={index} virtualIndex={index}>
+          <div key={index}>
+            <div className="slide-phone" key={index} >
               <div className="sliderLeft">
                 <p className="sliderLeftHead">{slideImage.head}</p>
                 <p className="sliderPara">{slideImage.para}</p>
