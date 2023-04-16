@@ -325,10 +325,16 @@ footer > p {
 .slideshow {
   max-width: 1240px;
   margin: 0 auto;
-
+padding-bottom: 25px;
   overflow: hidden;
 }
-
+.slick-dots li button:before{
+  font-size: 20px;
+  /* color: green; */
+}
+/* .slick-active > button{
+  background:linear-gradient(152.85deg, #B687FF -21.09%, #68B5DE 142.38%);
+} */
 .slide-phone {
   background: var(--text-secondary);
   display: flex;
@@ -343,6 +349,9 @@ footer > p {
 
 .slideshow .slick-active .slide-phone {
   border-color: var(--text-heading-dark);
+}
+.slick-dots li.slick-active button:before{
+  color:var(--text-heading);
 }
 
 .sliderLeft{
@@ -367,6 +376,9 @@ footer > p {
   width: 100%;
   object-fit: contain;
 }
+.video{
+  width: 100%;
+}
 
 @media screen and (min-width: 1200px) {
   ul {
@@ -377,12 +389,15 @@ footer > p {
     gap:2rem;
     background: var(--background-shade);
   }
+  .logo{
+    margin-left: 2rem;
+  }
   
   .heroHeading {
     width: unset;
     height: unset;
     text-align: center;
-    font-size: 65px;
+    font-size: 55px;
     line-height: 82px;
     margin-bottom: 0;
   }
@@ -538,6 +553,9 @@ footer > p {
   .sliderPara{
     margin-bottom:3rem;
   }
+  .video {
+    width: 600px;
+}
 }
 
 @media screen and (min-width: 1400px) {

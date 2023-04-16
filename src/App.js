@@ -1,4 +1,6 @@
-import videoIllustration from "./Boards.png";
+import videoIllustration from "./Boards.mp4";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 import footerLogo from "./logoFooter.png";
 import ios from "./ios.png";
@@ -71,8 +73,10 @@ function App() {
             </div>
           </section>
           <section id="overview" className="crowdEaseMain">
-            <div  >
-            <img className="videoIllstration" src={videoIllustration} alt="videoIllstration" />
+            <div>
+            <video className="video" controls>
+              <source src={videoIllustration} type="video/mp4" />
+            </video>
             </div>
             <div>
               <p className="headingMain">Why Crowd Ease?</p>
@@ -100,7 +104,7 @@ function App() {
 
           <section id="contact" className="mainFooter">
             <div className="footerFormArea">
-              <p className="mainFooterHeading">Lets Get Connected</p>
+              <p className="mainFooterHeading">Let's Get Connected</p>
               <p className="mainFooterDesc">
                 Got a question? We would love to hear from you.
               </p>

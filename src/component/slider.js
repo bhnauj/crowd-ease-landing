@@ -11,8 +11,6 @@ import phone1 from "../assets/phoneSection1.png";
 import phone2 from "../assets/phoneSection2.png";
 import phone3 from "../assets/phoneSection31.png";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const slideImages = [

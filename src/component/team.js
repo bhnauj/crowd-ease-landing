@@ -89,7 +89,7 @@ const teamImages = [
         sil:lightV,
         sid:darkV,
         linkedinUrl:'https://www.linkedin.com/in/manpreet-kaur07',
-        website:'https://google.com'
+        website:'https://manpreet.webflow.io'
     },
     {
         url: Anmol,

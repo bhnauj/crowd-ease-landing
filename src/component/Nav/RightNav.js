@@ -53,7 +53,7 @@ const RightNav = ({ open }) => {
     <ThemeContext.Consumer>
       {() => (
         <Ul open={open} theme={theme}>
-          <li><Link to="home" spy={true} smooth={true} offset={50} duration={500}>Overview</Link></li>
+          <li><Link to="home" spy={true} smooth={true} offset={50} duration={500} open={open}>Overview</Link></li>
           <li><Link to="feature" spy={true} smooth={true} offset={-30} duration={500}>Feature</Link></li>
           <li><Link to="team" spy={true} smooth={true} offset={-150} duration={3000}>Team</Link></li>
           <li><Link to="contact" spy={true} smooth={true} offset={-150} duration={3000}>Contact</Link></li>
