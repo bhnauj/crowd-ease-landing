@@ -48,12 +48,12 @@ function App() {
             
             <div className="heroImage">
             <p className="heroHeading">
-                Be in the Know. <br/> Track events and monitor <br/> live crowds with ease!
+                Be in the Know. Track events and monitor live crowds with ease!
               </p>
               <p className="heroHeading2 mainText">
               Crowd Ease assists restaurant managers to plan their <br/> resources and marketing strategy.
               </p>
-              <p className="mainText heroHeading3" >
+              {/* <p className="mainText heroHeading3" >
               Scroll for more <br/>
               <Link to="overview" spy={true} smooth={true} offset={-50} duration={3000}>
               {theme === "light" ? (
@@ -62,7 +62,7 @@ function App() {
                   <img src={dropDownDark} alt="dropDown" />
                 )}
               </Link>
-              </p>
+              </p> */}
 
             {theme === "light" ? (
                   <img src={hotel} alt="night" />
@@ -140,7 +140,7 @@ function App() {
 
 
               {/* <img src={footerLogo} alt="logo" /> */}
-              <p className="comingSoon">COMING SOON TO</p>
+              <p className="comingSoon">Coming soon to</p>
               <div className="appAvailable">
                 {theme === "light" ? (
                   <img src={darkAndroid} alt="night" />

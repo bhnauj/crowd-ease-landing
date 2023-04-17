@@ -98,7 +98,7 @@ const teamImages = [
         sil:lightV,
         sid:darkV,
         linkedinUrl:'https://www.linkedin.com/in/anmoldeep-kaur01',
-        website:'https://google.com'
+        website:'https://anmols-portfolio-f81a6e.webflow.io'
     }
   ];
 
