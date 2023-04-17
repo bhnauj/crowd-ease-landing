@@ -3,6 +3,11 @@
   background: var(--background2);
   color: var(--text-primary);
   transition: all 0.5s;
+  margin-top: 78px;
+}
+
+@media screen {
+  
 }
 .App-logo {
   height: 40vmin;
@@ -48,6 +53,18 @@
 }
 
 /* Header  */
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1111;
+  background: var(--background2);
+  top: 0;
+}
+
+header nav {
+  z-index: 1111;
+}
 
 ul {
   margin: 0;
