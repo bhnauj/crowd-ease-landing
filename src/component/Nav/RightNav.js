@@ -54,10 +54,10 @@ const RightNav = ({ open, setOpen }) => {
     <ThemeContext.Consumer>
       {() => (
         <Ul open={open} theme={theme}>
-          <li><Link to="home" spy={true} smooth={true} offset={50} duration={500} onClick={() => setOpen(!open)} >Overview</Link></li>
-          <li><Link to="feature" spy={true} smooth={true} offset={-30} duration={500} onClick={() => setOpen(!open)}>Feature</Link></li>
-          <li><Link to="team" spy={true} smooth={true} offset={-150} duration={3000} onClick={() => setOpen(!open)}>Team</Link></li>
-          <li><Link to="contact" spy={true} smooth={true} offset={-150} duration={3000} onClick={() => setOpen(!open)}>Contact</Link></li>
+          <li><Link to="overview" spy={true} smooth={true} offset={-150} duration={500} onClick={() => setOpen(!open)} >Overview</Link></li>
+          <li><Link to="feature" spy={true} smooth={true} offset={-80} duration={500} onClick={() => setOpen(!open)}>Feature</Link></li>
+          <li><Link to="team" spy={true} smooth={true} offset={-190} duration={3000} onClick={() => setOpen(!open)}>Team</Link></li>
+          <li><Link to="contact" spy={true} smooth={true} offset={50} duration={3000} onClick={() => setOpen(!open)}>Contact</Link></li>
           <li>
             <button className="systemDesign"><a href="/pdf-name.pdf" target='_blank' rel="noreferrer">Design System</a></button>
           </li>
