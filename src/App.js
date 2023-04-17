@@ -7,7 +7,8 @@ import ios from "./ios.png";
 import android from "./android.png";
 import darkios from "./darkios.png";
 import darkAndroid from "./darkAndroid.png";
-
+import logo from './logo.png';
+import logoLight from './logoLight.png';
 import mapAnim from "./MapAnim.png";
 import dropDown from "./dropDown.png";
 import dropDownDark from "./dropDownDark.png";
@@ -129,7 +130,16 @@ function App() {
               </form>
             </div>
             <div>
-              <img src={footerLogo} alt="logo" />
+
+            {theme === "light" ? (
+                <img className="footerLogoDetail" src={logoLight} alt="night" />
+              ) : (
+                <img className="footerLogoDetail" src={footerLogo} alt="logo" /> 
+              )}
+
+
+
+              {/* <img src={footerLogo} alt="logo" /> */}
               <p className="comingSoon">COMING SOON TO</p>
               <div className="appAvailable">
                 {theme === "light" ? (

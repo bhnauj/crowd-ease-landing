@@ -29,13 +29,14 @@ const Ul = styled.ul`
     height: 100vh;
     width: 100%;
     transition: transform 0.3s ease-in-out;
+    z-index: 1;
     li {
       color: ${({ theme }) => (theme === 'dark' ? "white" : "black")};
     }
   }
 `;
 
-const RightNav = ({ open }) => {
+const RightNav = ({ open, setOpen }) => {
   const { setThemeMode } = useContext(ThemeContext);
   const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [theme, setTheme] = useLocalStorage(
@@ -53,7 +54,7 @@ const RightNav = ({ open }) => {
     <ThemeContext.Consumer>
       {() => (
         <Ul open={open} theme={theme}>
-          <li><Link to="home" spy={true} smooth={true} offset={50} duration={500} open={open}>Overview</Link></li>
+          <li><Link to="home" spy={true} smooth={true} offset={50} duration={500} onClick={() => setOpen(!open)} >Overview</Link></li>
           <li><Link to="feature" spy={true} smooth={true} offset={-30} duration={500}>Feature</Link></li>
           <li><Link to="team" spy={true} smooth={true} offset={-150} duration={3000}>Team</Link></li>
           <li><Link to="contact" spy={true} smooth={true} offset={-150} duration={3000}>Contact</Link></li>
