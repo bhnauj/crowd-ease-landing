@@ -82,13 +82,8 @@ function App() {
             <div>
               <p className="headingMain">Why Crowd Ease?</p>
               <p className="WhyCrowdEaseDetail">
-                CROWD EASE will assist you in navigating the chaos of event
-                planning with ease. Maintain real-time crowd data, manage your
-                schedule like a pro, and gain access to comprehensive reports
-                for full-week scheduling. As a restaurant owner or employee,
-                you'll be able to optimize inventory and streamline operations
-                thanks to our cutting-edge technology. CROWD EASE is ready to
-                take your restaurant to the next level!
+              Crowd Ease is a mobile app that assists restaurant managers in planning their resources and marketing strategy by providing weekly information on events and live crowd tracking around their area.
+It allows you to check a full-week event forecast that will assist you in tracking down big events and being up to date with real-time crowd data. With this information, you can optimize your resources and inventory and streamline operations thanks to our cutting-edge technology. CROWD EASE is ready to take your restaurant to the next level!
               </p>
             </div>
           </section>
