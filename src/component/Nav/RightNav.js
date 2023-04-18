@@ -24,7 +24,7 @@ const Ul = styled.ul`
     background-color: ${({ theme }) => (theme === 'dark' ? "black" : "white")};
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-    top: 4rem;
+    top: 5rem;
     right: 0;
     height: 100vh;
     width: 100%;

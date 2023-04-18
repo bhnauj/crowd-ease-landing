@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Burger from './Burger';
 import logo from '../../logo.png';
 import logoLight from '../../logoLight.png';
+import logoEnim from '../../logo.gif';
+import logoLightEnim from '../../logoLight.gif'
 import ThemeContext from '../../context/themeContext';
 
 const Nav = styled.nav`
@@ -23,9 +25,9 @@ const Navbar = () => {
     <Nav>
       <div className="logo">
       {theme === "light" ? (
-                <img className='logoMain' src={logoLight} alt="night" />
+                <img className='logoMain' src={logoLightEnim} alt="night" />
               ) : (
-                <img className='logoMain' src={logo}  alt="logo" />
+                <img className='logoMain' src={logoEnim}  alt="logo" />
               )}
         
       </div>

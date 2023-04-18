@@ -11,7 +11,8 @@
   pointer-events: none;
 }
 .logoMain{
-  width: 60%;
+  width: 30%;
+  margin-left: -2rem;
 }
 .WhyCrowdEaseDetail {
   text-align: left;
@@ -399,6 +400,9 @@ padding-bottom: 25px;
   width:69px;
   height:104px;
 }
+.logo{
+  display: flex;
+}
 
 @media screen and (min-width: 1200px) {
   ul {
@@ -409,10 +413,7 @@ padding-bottom: 25px;
     gap:0.5rem;
     background: var(--background-shade);
   }
-  .logo{
-    margin-left: 2rem;
-  }
-  
+   
   .heroHeading {
     width: unset;
     height: unset;
@@ -557,6 +558,7 @@ padding-bottom: 25px;
   }
   .formButton {
     width: 470px;
+    font-family: "Circular Std";
   }
   .mainFooter > div > p {
     padding-left: 1.5rem;
@@ -576,6 +578,10 @@ padding-bottom: 25px;
   .video {
     width: 600px;
 }
+.logoMain {
+  width: 35%;
+  margin-left: unset;
+}
 }
 
 @media screen and (min-width: 1400px) {
@@ -590,6 +596,9 @@ padding-bottom: 25px;
   .slide-phone{
     justify-content: space-evenly;
   }
+  .logoMain {
+    width: 22%;
+}
   
 }
 @media screen and (min-width: 1500px) {
