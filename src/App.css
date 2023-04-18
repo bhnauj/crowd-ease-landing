@@ -302,6 +302,8 @@ footer > p {
   border: none;
   cursor: pointer;
   overflow: hidden;
+
+  padding: 1rem;
 }
 .socialIcon {
   display: grid;
@@ -446,6 +448,9 @@ padding-bottom: 25px;
     width: 80%;
     padding:3.5rem;
   }
+  .theme {
+    order: 3;
+}
   .mainText {
     clip: unset;
     clip-path: unset;
@@ -512,6 +517,7 @@ padding-bottom: 25px;
   }
   .team {
     border-radius:22px;
+
   }
   .sliderLeft{
     flex-basis: 200px;
