@@ -3,10 +3,6 @@ import ThemeContext from '../../context/themeContext';
 import styled from 'styled-components'
 import RightNav from './RightNav';
 
-import useLocalStorage from "use-local-storage";
-import night from "../../assets/night.png";
-import morning from "../../assets/Morning.png";
-
 const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
@@ -42,8 +38,7 @@ const StyledBurger = styled.div`
 
 const Burger = () => {
     const [open, setOpen] = useState(false);
-    
-    const { setThemeMode } = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
     useEffect(()  => {
       if(open) {
         document.body.classList.add('lock-scroll');
@@ -56,19 +51,6 @@ const Burger = () => {
           document.body.classList.remove('lock-scroll');
       };
   }, [open]);
-
-  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  
-  const [theme, setTheme] = useLocalStorage(
-    "theme",
-    defaultDark ? "dark" : "light"
-  );
-  const switchTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setThemeMode(newTheme);
-    setTheme(newTheme);
-  };
-
   return (
     <>
     <StyledBurger theme={theme} open={open} onClick={() => setOpen(!open)}>
@@ -76,14 +58,6 @@ const Burger = () => {
       <div />
       <div />
     </StyledBurger>
-     <button className="theme" onClick={switchTheme}>
-              {theme === "light" ? (
-                <img src={night} alt="night" />
-              ) : (
-                <img src={morning} alt="morning" />
-              )}
-      </button>
-    
     <RightNav open={open} setOpen={setOpen} />
     </>
   )

@@ -64,7 +64,7 @@ const RightNav = ({ open, setOpen }) => {
           <li>
             <button className="proposal"><a href={proposal} className="proposal" download>Download Proposal</a></button>
           </li>
-          {/* <li>
+          <li>
             <button className="theme" onClick={switchTheme}>
               {theme === "light" ? (
                 <img src={night} alt="night" />
@@ -72,7 +72,7 @@ const RightNav = ({ open, setOpen }) => {
                 <img src={morning} alt="morning" />
               )}
             </button>
-          </li> */}
+          </li>
         </Ul>
       )}
     </ThemeContext.Consumer>
